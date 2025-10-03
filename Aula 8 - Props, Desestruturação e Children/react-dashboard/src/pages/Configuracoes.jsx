@@ -36,8 +36,20 @@ export default function Configuracoes() {
           ))
         }
       </Section>
-      <Section titulo="Conta"/>
-      <Section titulo="Avançado"/>
+      <Section titulo="Conta">
+        {
+          data.conta.map(pegaItem => (
+            <Card {...pegaItem}/>
+          ))
+        }
+      </Section>
+      <Section titulo="Avançado">
+        {
+          data.avancado.map(pegaItem => (
+            <Card {...pegaItem}/>
+          ))
+        }
+      </Section>
     </div>
   );
 }
